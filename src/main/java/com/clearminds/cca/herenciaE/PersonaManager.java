@@ -5,6 +5,7 @@ import com.clearminds.impl.ServicioPersonaArchivos;
 import com.clearminds.impl.ServicioPersonaBDD;
 import com.clearminds.interfaces.ServicioPersona;
 import com.clearminds.model.Persona;
+import com.clearminds.test.Util;
 
 public class PersonaManager {
 
@@ -13,8 +14,11 @@ public class PersonaManager {
 	public PersonaManager() throws InstanceException {
 		super();
 //		serv = new ServicioPersonaArchivos();
+		
+		String claseInstanciar = Util.leerPropiedad();
+		
 		try {
-			Class<?> clase = Class.forName("com.clearminds.impl.ServicioPersonaBDD");
+			Class<?> clase = Class.forName(claseInstanciar);
 			serv = (ServicioPersona) clase.newInstance();
 		
 		} catch (ClassNotFoundException e) {

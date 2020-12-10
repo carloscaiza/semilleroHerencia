@@ -11,7 +11,7 @@ public class TestManager {
 		PersonaManager pm;
 		try {
 			pm = new PersonaManager();
-			pm.insertarPersona(new Persona("Carlos", "CAIZA","172838398"));
+			pm.insertarPersona(new Persona("CLEAR", "MINDS","172838398"));
 		} catch (InstanceException e) {
 			e.printStackTrace();
 		}
