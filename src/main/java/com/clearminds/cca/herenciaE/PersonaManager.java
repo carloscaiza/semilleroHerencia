@@ -1,5 +1,6 @@
 package com.clearminds.cca.herenciaE;
 
+import com.clearminds.impl.ServicioPersonaArchivos;
 import com.clearminds.impl.ServicioPersonaBDD;
 import com.clearminds.interfaces.ServicioPersona;
 import com.clearminds.model.Persona;
@@ -10,7 +11,7 @@ public class PersonaManager {
 
 	public PersonaManager() {
 		super();
-		serv = new ServicioPersonaBDD();
+		serv = new ServicioPersonaArchivos();
 	}
 	
 	
