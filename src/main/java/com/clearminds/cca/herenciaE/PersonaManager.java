@@ -21,14 +21,10 @@ public class PersonaManager {
 			Class<?> clase = Class.forName(claseInstanciar);
 			serv = (ServicioPersona) clase.newInstance();
 		
-		} catch (ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			throw new InstanceException("Error al obtener una instancia de ServicioPersona");
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
+		} 
 
 		
 	}
